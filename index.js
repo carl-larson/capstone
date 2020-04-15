@@ -6,6 +6,8 @@ require ('dotenv').config();
 const app = express();
 const port = process.env.PORT || 4001;
 
+app.use('/players', usersRouter);
+
 app.get('/', (req, res) => {
     res.send('Welcome to my Capstone server!')
     })
